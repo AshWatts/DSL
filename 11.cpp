@@ -70,13 +70,14 @@ int main()
     int a;
 
     cout<<"Queue Operations : \n";
+
+    do
+    {
     cout<<"1. - Add an Element\n";
     cout<<"2. - Delete an Element\n";
     cout<<"3. - Display the Queue\n";
     cout<<"4. - Exit\n";
 
-    do
-    {
     cout<<"Choose an option : ";
     cin>>a;
 
