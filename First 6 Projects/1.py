@@ -7,15 +7,15 @@ def group(grp,student_name):
         grp.append(student_name)
 
 print("Enter students in group A")
-for student in input().split(" "):
+for student in input().split():
     group(a,student)
 
 print("Enter students in group B")
-for student in input().split(" "):
+for student in input().split():
     group(b,student)
 
 print("Enter students in group C")
-for student in input().split(" "):
+for student in input().split():
     group(c,student)
 
 def first():
