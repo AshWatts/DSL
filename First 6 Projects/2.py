@@ -11,7 +11,7 @@ def freq(x, text):
     count = 0
     for i in text:
         if i == x:
-            count = count + 1
+            count += 1
     return count
 
 
@@ -33,11 +33,11 @@ def subs(subt, text):
 
 def occ(text):
     word_counts = {}
-    for word in text.split():
-        if word in word_counts:
-            word_counts[word] += 1
+    for i in text.split():
+        if i in word_counts:
+            word_counts[i] += 1
         else:
-            word_counts[word] = 1
+            word_counts[i] = 1
     return word_counts
 
 
