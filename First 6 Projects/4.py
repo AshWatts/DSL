@@ -1,4 +1,5 @@
 a = []
+flag = False
 n = int(input("Enter number of students : "))
 for i in range(n):
     ele = int(input("Enter the Roll Number : "))
@@ -7,7 +8,6 @@ z=int(input("Enter the roll number to be searched : "))
 
 
 def ls():
-    flag=False
     for i in a:
         if i==z:
             print("Position of Given Student : ",i)
@@ -19,7 +19,6 @@ def ls():
 
 def bs():
     a.sort()
-    flag=False
     low=0
     high=n-1
     mid=0
@@ -40,10 +39,21 @@ def bs():
 
 
 def ss():
+    last=a[n-1]
+    a[n-1]=z
+    i=0
+    while(a[i]!=z):
+        i+=1
 
+    a[n-1]=last
+
+    if((i<n-1) or (a[n-1]==z)):
+        print("Position of Given Student : ", i+1)
+    else:
+        print("Given Roll Number is missing!")
 
 def fs():
-
+    
 
 
 print("""Searching Types : 
