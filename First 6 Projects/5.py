@@ -20,11 +20,32 @@ def sel_s():
     print("Selection Sort : ",l)
 
 
-def is():
+def ins():
+    for i in range(1,n):
+        temp=l[i]
+        j=i-1
+        while(j>=0 and temp<=l[j]):
+            l[j+1]=l[j]
+            j=j-1
+        l[j+1]=temp
+    print("Insertion Sort : ",l)
 
+def shell_s():
+    gap=n//2
+    while(gap>0):
+        i=gap
+        while(i<n):
+            j=i-gap
+            while(j>=0):
+                if(l[j+gap]>l[j]):
+                    break
+                else:
+                    l[j],l[j+gap]=l[j+gap],l[j]
+                j=j-gap
+            i=i+1
+        gap=gap//2
 
-#def shell_s():
-
+    print("Shell Sort : ",l)
 
 
 
@@ -35,7 +56,10 @@ for i in range(n):
     ele = float(input("Enter percentage : "))
     l.append(ele)
 
-is()
+bs()
+sel_s()
+ins()
+shell_s()
 
 print("Displaying top 5 scores : ")
 for i in range(5):
