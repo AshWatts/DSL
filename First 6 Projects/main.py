@@ -24,7 +24,7 @@ def sel_s():
 
 
 def ins():
-    
+
 
 l = []
 n = int(input("Enter number of Students : "))
