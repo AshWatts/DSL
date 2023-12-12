@@ -1,31 +1,41 @@
-# 5
-
-def partition(l, low, high):
-    pivot = l[high]
-    i = low - 1
-
-    for j in range(low,high):
-        if l[j] <= pivot:
-            i += 1
-            (l[i], l[j]) = (l[j], l[i])
-    (l[i + 1], l[high]) = (l[high], l[i + 1])
-    return i + 1
+#5
 
 
-def quick_sort(l, low, high):
-    if low < high:
-        p = partition(l, low, high)
-        quick_sort(l, low, p - 1)
-        quick_sort(l, low + 1, high)
+def bs():
+    for i in range(n):
+        flag=False
+        for j in range(n-i-1):
+            if(l[j]>l[j+1]):
+                (l[j],l[j+1])=(l[j+1],l[j])
+                flag=True
+        if(flag==False):
+            break
+    print("Binary Sort : ",l)
 
+
+def sel_s():
+    for i in range(n):
+        min=i
+        for j in range(i+1,n):
+            if(l[min]>l[j]):
+                min=j
+        l[i],l[min]=l[min],l[i]
+    print("Selection Sort : ",l)
+
+
+def ins():
+    
 
 l = []
-n = int(input("Enter the number of students : "))
+n = int(input("Enter number of Students : "))
 for i in range(n):
-    ele = float(input("Enter the Percentage : "))
+    ele = float(input("Enter percentage : "))
     l.append(ele)
-quick_sort(l, 0, n - 1)
 
-print("Displaying top 5 Scores : ")
+bs()
+sel_s()
+ins()
+
+print("Displaying top 5 scores : ")
 for i in range(5):
-    print(l[-i - 1])
+    print(l[n - i - 1])
