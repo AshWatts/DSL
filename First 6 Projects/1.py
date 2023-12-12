@@ -36,18 +36,8 @@ def second():
     return either
 
 def third():
-    all=[]
     y=[]
-    for student in a:
-            all.append(student)
-    for student in b:
-        if student not in a:
-            all.append(student)
     for student in c:
-        if student not in a and student not in b:
-            all.append(student)
-
-    for student in all:
         if student not in a and student not in b:
             y.append(student)
     return len(y)
