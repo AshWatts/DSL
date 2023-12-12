@@ -25,6 +25,8 @@ for i in range(n):
 
 quick_sort(l, 0, n - 1)
 
+print("Sorted List : ",l)
+
 print("Displaying top 5 scores : ")
 for i in range(5):
     print(l[n - i - 1])
