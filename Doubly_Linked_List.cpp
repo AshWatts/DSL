@@ -76,17 +76,78 @@ class dll
 
     void insert_at_end()
     {
+        node *temp, *New;
+        int val;
 
+        New=new node;
+
+        cout<<"Enter element to be at end : ";
+        cin>>val;
+
+        if(New==NULL)
+        {
+            cout<<"Unable";
+        }
+        else
+        {
+            New->data=val;
+            New->next=NULL;
+            New->prev=NULL;
+
+            if(head==NULL)
+            {
+                head=New;
+            }
+            else
+            {
+                temp=head;
+                while(temp->next!=NULL)
+                {
+                    temp=temp->next;
+                }
+                temp->next=New;
+                New->prev=temp;
+                New->next=NULL;
+            }
+        }
     }
 
     void insert_at_head()
     {
+        int val;
+        node *temp,*New;
+        New=new node;
 
+        cout<<"Enter element to be added at Head : ";
+        cin>>val;
+
+        if(New==NULL)
+        {
+            cout<<"Unable";
+        }
+        else
+        {
+            New->data=val;
+            New->prev=NULL;
+            New->next=NULL;
+
+            if(head==NULL)
+            {
+                head=New;
+            }
+            else
+            {
+                temp=head;
+                head=New;
+                New->next=temp;
+                temp->prev=New;
+            }
+        }
     }
 
     void insert_at_position()
     {
-
+        // NOT THAT IMP
     }
 
     void del()
@@ -113,7 +174,7 @@ class dll
         }
         if(temp==NULL)
         {
-            cout<<"Element absent!";
+            cout<<"Element absent!\n";
         }
         else
         {
@@ -149,9 +210,9 @@ int main()
 {
     dll d;
     d.create();
-    // d.insert_at_head();
+    d.insert_at_head();
     // d.insert_at_position();
-    // d.insert_at_end();
+    d.insert_at_end();
     d.show();
     d.del();
     d.show();   
