@@ -76,11 +76,12 @@ class add
         return 0;
     }
 
-    int calc(add p1, add p2)
+    void calc(add p1, add p2)
     {
-        node *t1, *t2, *temp;
+        node *t1, *t2, *t;
         t1=p1.head;
         t2=p2.head;
+        float Coef;
         head=new node;
 
         if(head==NULL)
@@ -88,12 +89,51 @@ class add
             cout<<"Unable";
         }
 
-        temp=head;
+        t=head;
 
-        while(t1!=NULL && t2!=NULL)
+        while(t1!=NULL && t2!=NULL)              
         {
-            
+            if(t1->e > t2->e)
+            {
+                t->e=t1->e;
+                t->c=t1->c;
+                t1=t1->next;
+                t=t->next;
+            }
+            else if(t1->e < t2->e)
+            {
+                t->e=t2->e;
+                t->c=t2->c;
+                t2=t2->next;
+                t=t->next;
+            }
+            else
+            {
+                Coef=t1->c+t2->c;
+                head=attach(t1->e,Coef,head);
+                t1=t1->next;
+                t2=t2->next;
+            }
         }
+        while(t1!=NULL)
+        {
+            t->c=t1->c;
+            t->e=t1->e;
+            t=t->next;
+            t1=t1->next;
+        }
+        while(t2!=NULL)
+        {
+            t->c=t2->c;
+            t->e=t2->e;
+            t=t->next;
+            t2=t2->next;
+        }
+    }
+
+    void attach(int exp, float coef, node *temp)
+    {
+        
     }
 
 };
