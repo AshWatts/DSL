@@ -16,13 +16,22 @@ int main()
         cin>>x;
     }while(x=='y');
 
-    do
+    cout<<endl;
+
+    
+    char z;
+    cout<<"Do you want to delete an element?(y/n) : ";
+    cin>>z;
+    if(z=='y')
     {
-        int a;
-        a=s.top();
-        cout<<"Deleted element "<<a<<endl;
-        s.pop();
-        cout<<"Do you want to delete more elements?(y/n) : ";
-        cin>>x;
-    }while(x=='y');
+        do
+        {
+            int a;
+            a=s.top();
+            cout<<"Deleted element "<<a<<endl;
+            s.pop();
+            cout<<"Do you want to delete more elements?(y/n) : ";
+            cin>>x;
+        }while(x=='y');
+    }
 }
