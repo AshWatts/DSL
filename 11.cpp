@@ -22,7 +22,7 @@ public:
 
     int insert(int val)
     {
-        if(rear==4)
+        if(rear>=4)
         {
             cout<<"Queue is Full"<<endl;
             return 0;
@@ -108,6 +108,8 @@ int main()
     {
         cout<<"Enter a Valid Choice!"<<endl;
     }
+
+    cout<<endl<<endl;
 
     }while(a!=4);
 }

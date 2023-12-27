@@ -1,11 +1,3 @@
-//============================================================================
-// Name        : 21283_Assignment_13.cpp
-// Author      : Ayush W
-// Version     :
-// Copyright   : None
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
 #include <iostream>
 using namespace std;
 
@@ -15,7 +7,7 @@ class Deque
 {
 	int front,rear;
 	int size=5;
-public:
+	public:
 	Deque()
 	{
 		front=-1;
