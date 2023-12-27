@@ -28,7 +28,7 @@ int main()
         {
             int a;
             a=s.top();
-            cout<<"Deleted element "<<a<<endl;
+            cout<<"Deleted element is : "<<a<<endl;
             s.pop();
             cout<<"Do you want to delete more elements?(y/n) : ";
             cin>>x;
