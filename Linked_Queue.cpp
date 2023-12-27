@@ -9,7 +9,6 @@ struct Node
     Node* next;
 };
 
-// Queue class implementation
 class Queue 
 {
 private:
