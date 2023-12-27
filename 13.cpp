@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int queue[5];
+const int size = 5;
 
 class Deque
 {
+	private:
 	int front,rear;
-	int size=5;
+	int queue[size];
+	
 	public:
 	Deque()
 	{
