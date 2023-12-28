@@ -109,10 +109,11 @@ class add
             }
             else
             {
-                Coef=t1->c+t2->c;
-                head=attach(t1->e,Coef,head);
+                t->e=t1->e + t2->e;
+                t->c=t1->c + t2->c;
                 t1=t1->next;
                 t2=t2->next;
+                t=t->next;
             }
         }
         while(t1!=NULL)
@@ -130,12 +131,6 @@ class add
             t2=t2->next;
         }
     }
-
-    void attach(int exp, float coef, node *temp)
-    {
-        
-    }
-
 };
 
 
