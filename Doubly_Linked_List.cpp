@@ -107,7 +107,6 @@ class dll
                 }
                 temp->next=New;
                 New->prev=temp;
-                New->next=NULL;
             }
         }
     }

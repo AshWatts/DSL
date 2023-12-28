@@ -1,5 +1,5 @@
 def bs():
-    for i in range(n):
+    for i in range(n-1):
         flag = False
         for j in range(n-i-1):
             if(l[j]>l[j+1]):
