@@ -158,9 +158,7 @@ int main()
 		{
 			cout<<"Enter a Valid Choice!\n\n";
 		}
-	}
-	while(ch!=6);
-
+	}while(ch!=6);
 
 	return 0;
 
