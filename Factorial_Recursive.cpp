@@ -4,11 +4,15 @@ using namespace std;
 
 int fact(int n)
 {
+    int a,b;
     if(n==0)
     {
         return 1;
     }
-    return n*fact(n-1);
+    a=n;
+    b=fact(n-1);
+    int f = a*b;
+    return f;
 }
 
 
